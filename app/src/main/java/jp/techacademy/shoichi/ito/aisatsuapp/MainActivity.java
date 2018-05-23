@@ -29,10 +29,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.button1) {
             showTimePickerDialog();
         }
-    }
+    
 
     private void showTimePickerDialog() {
         TimePickerDialog timePickerDialog = new TimePickerDialog(this,
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             mTextView.setText("おはよう");
                         }else if (hourOfDay >= 10 && hourOfDay < 18) {
                             mTextView.setText("こんにちは");
-                        }else if (hourOfDay >= 18 || hourOfDay < 2) {
+                        }else {
                             mTextView.setText("こんばんは");
                         }
                     }
